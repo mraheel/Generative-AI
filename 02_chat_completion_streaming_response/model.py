@@ -14,6 +14,7 @@ class OpenAIBot:
         self.model: str = model
         # self.stram: str = True
         load_dotenv(find_dotenv()) 
+        print(f"Open API KEY is {os.environ.get('OPENAI_API_KEY')}")
         self.client: OpenAI = OpenAI()
         self.messages: list[MessageItem] = []
         self.streams = []
